@@ -10,6 +10,12 @@ module "azurerm_resource_group2" {
   resource_group_location = "West US"
 }
 
+module "azurerm_resource_group3" {
+  source                  = "../Modules/azurerm_resource_group"
+  resource_group_name     = "todo_app_rgbhavishya"
+  resource_group_location = "centrail india"
+}
+
 module "azurerm_virtual_network" {
   depends_on           = [module.azurerm_resource_group]
   source               = "../Modules/azurerm_virtual_network"
